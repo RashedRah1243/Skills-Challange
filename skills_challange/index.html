@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>skills chal</title>
+    <link rel="stylesheet" href="app.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+                <button id="new-task-btn" class="new-task-btn"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                        height="16" fill="currentColor" class="bi bi-plus-circle" viewBox="0 0 16 16">
+                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16" />
+                        <path
+                            d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4" />
+                    </svg></button>
+            <button class="export">Export</button>
+            <input type="search" name="search" id="search" placeholder="Search" class="search">
+            <div class="priorityFilter">
+                <h3>Priority:</h3>
+                <select id="prioritySelect">
+                        <option value="">All</option>
+                        <option value="low">low</option>
+                        <option value="medium">medium</option>
+                        <option value="high">high</option>
+                </select>
+            </div>
+            <div class="sort">
+                <h3>Sort:</h3>
+                <select id="sort">
+                    <option value="estimatedTime">Estimated Time</option>
+                    <option value="actualTime">Actual Time</option>
+                    <option value="priority">Priority</option>
+                </select>
+            </div>
+            <button class="clear">clear Tasks</button>
+        </div>
+
+        <dialog class="deleteDialog">
+            <div class="containerDel">
+                <h1>Are You sure You want to delete this Task?</h1>
+                <button class="deleteTask">Yes</button>
+                <button class="cancelDel">cancel</button>
+            </div>
+        </dialog>
+        <dialog class="dialogCreateTask">
+            <form class="dialog">
+                <h1>Create Task</h1>
+                <input type="text" name="title" id="title" placeholder="Task title" required>
+                <input type="text" name="description" id="description" placeholder="Task description" required>
+                <input type="number" name="timeEstimate" id="timeEs" placeholder="Estimated Time (In Mins)" required>
+                <select id="priority">
+                    <option value="low">low</option>
+                    <option value="medium">medium</option>
+                    <option value="high">high</option>
+                </select>
+                <button class="create" type="submit">Create</button>
+                <button class="cancel" type="reset">cancel</button>
+            </form>
+        </dialog>
+        <dialog class="dialogEditTask">
+            <div class="editContainer">
+                <form class="dialogEdit">
+                    <h1>Create Task</h1>
+                    <input type="text" name="title" id="titleEdit" placeholder="Task title">
+                    <input type="text" name="description" id="descriptionEdit" placeholder="Task description">
+                    <input type="number" name="timeEstimate" id="timeEsEdit" placeholder="Estimated Time (In Mins)">
+                    <select id="priorityEdit">
+                        <option value="low">low</option>
+                        <option value="medium">medium</option>
+                        <option value="high">high</option>
+                    </select>
+                    <button class="editConfirm" type="submit">Edit</button>
+                    <button class="cancelEdit" type="button">cancel</button>
+                </form>
+            </div>
+        </dialog>
+    </div>
+    <div class="taskWrapper">
+        <div class="toDo column" id="toDo">
+            <h1>To Do</h1>
+
+        </div>
+        <div class="inProgress column" id="inProgress">
+            <h1>In Progress</h1>
+        </div>
+        <div class="completed column" id="completed">
+            <h1>Completed</h1>
+        </div>
+    </div>
+    </div>
+    <script src="index.js"></script>
+
+</body>
+
+</html>

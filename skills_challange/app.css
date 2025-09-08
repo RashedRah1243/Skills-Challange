@@ -1,0 +1,354 @@
+.taskWrapper {
+    display: flex;
+    justify-content: space-around;
+}
+
+body {
+    background: linear-gradient(165deg, rgb(68, 68, 233), purple);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.column {
+    padding: 0 50px;
+    background-color: rgba(0, 0, 0, 0.329);
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    user-select: none;
+    gap: 30px;
+    width: 500px;
+    border-radius: 5px;
+
+}
+
+.createTask {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.new-task-btn {
+    background-color: blue;
+    border: transparent;
+    border-radius: 10px;
+}
+
+.new-task-btn svg {
+    width: 60px;
+    height: 60px;
+    color: white;
+}
+
+.tasks {
+    background-color: rgba(255, 255, 255, 0.445);
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 20px;
+    display: flex;
+    gap: 2px;
+    flex-direction: column;
+    transition: rotate 0.2s ease;
+    color: white;
+}
+
+.dragged {
+    position: absolute;
+    pointer-events: none;
+    rotate: -10deg;
+    width: 300px;
+}
+
+
+.dragged .parent {
+    display: none;
+}
+
+.dialog {
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+    gap: 20px;
+    text-align: center;
+}
+
+.dialog input {
+    padding: 10px 200px 10px 20px;
+}
+
+.dialog button {
+    padding: 10px 50px;
+}
+
+.create {
+    border: transparent;
+    background-color: greenyellow;
+}
+
+.cancel {
+    border: transparent;
+    background-color: red;
+}
+
+::backdrop {
+    background-color: rgba(0, 0, 0, 0.473);
+}
+
+.start {
+    background-color: greenyellow;
+    border: transparent;
+}
+
+.pause {
+    border: transparent;
+    background-color: yellow;
+}
+
+.stop {
+    border: transparent;
+    background-color: red;
+}
+
+.buttons button {
+    padding: 5px 10px;
+}
+
+button {
+    cursor: pointer;
+}
+
+.toDo .buttons {
+    display: none;
+}
+
+.completed .buttons {
+    display: none;
+}
+
+
+.tasks div {
+    font-size: 15px;
+}
+
+.tasks h3 {
+    font-size: 15px;
+}
+
+.toDo .timerContent {
+    display: none;
+}
+
+.toDo .timeDiff {
+    display: none;
+}
+
+.inProgress .timeDiff {
+    display: none;
+}
+
+.timeES {
+    display: flex;
+    flex-direction: column;
+}
+
+.parent {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    align-items: center;
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.line {
+    background-color: grey;
+    padding: 30px 1px;
+
+}
+
+.line2 {
+    background-color: grey;
+    padding: 30px 1px;
+
+}
+
+.toDo .line {
+    display: none;
+}
+
+.toDo .line2 {
+    display: none;
+}
+
+.inProgress .line2 {
+    display: none;
+}
+
+.timerContent h3 {
+    margin: 0;
+}
+
+.timerContent {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.column h1 {
+    color: white;
+}
+
+select {
+    padding: 10px;
+}
+
+.low {
+    color: green;
+}
+
+.medium {
+    color: yellow;
+}
+
+.high {
+    color: red;
+}
+
+.priority {
+    font-size: 20px;
+    margin-top: 0;
+}
+
+.topButtons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.delete {
+    color: white;
+}
+
+.edit {
+    color: white;
+}
+
+.dragged .topButtons {
+    display: none;
+}
+
+.dragged .priority {
+    display: none;
+}
+
+.containerDel {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 500px;
+    text-align: center;
+}
+
+.deleteDialog button {
+    padding: 10px 30px;
+}
+
+.cancelDel {
+    background-color: red;
+    border: transparent;
+    color: white;
+    border-radius: 5px;
+}
+
+.deleteTask {
+    background-color: rgb(109, 148, 52);
+    color: white;
+    border-radius: 5px;
+    border: 1px solid transparent;
+    outline: none;
+}
+
+.dialogEdit {
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+    gap: 20px;
+    text-align: center;
+}
+
+.dialogEdit input {
+    padding: 10px 200px 10px 20px;
+}
+
+.dialogEdit button {
+    padding: 10px 50px;
+}
+
+.editConfirm {
+    border: transparent;
+    background-color: greenyellow;
+}
+
+.cancelEdit{
+    background-color: red;
+    border: transparent;
+}
+
+.header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.export{
+    padding: 10px 45px;
+    border: transparent;
+    border-radius: 10px;
+    background-color: orange;
+}
+
+.search{
+    padding: 10px 60px 10px 20px;
+    border-radius: 10px;
+}
+
+.priorityFilter{
+    display: flex;
+    gap: 5px;
+}
+
+.lowSelect{
+    color: green;
+}
+
+.mediumSelect{
+    color: yellow;
+}
+
+.highSelect{
+    color: red;
+}
+
+.sort{
+    display: flex;
+    gap: 5px;
+}
+
+.clear{
+    padding: 20px 40px;
+    background-color: blueviolet;
+    border-radius: 10px;
+    color: white;
+    border: transparent;
+}
