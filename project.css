@@ -1,1 +1,19 @@
+.container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
 
+.column {
+    padding: 0 50px;
+    background-color: rgba(0, 0, 0, 0.329);
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    user-select: none;
+    gap: 30px;
+    width: 500px;
+    border-radius: 5px;
+
+}
