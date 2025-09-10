@@ -8,7 +8,7 @@ body{
 .container{
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   align-items: stretch;
   gap: 40px;
   min-height: 100dvh;
@@ -31,7 +31,7 @@ body{
   margin: 20px 0;
 }
 
-.column h1{
+.column h1 {
   font-size: 2rem;
   margi-bottom: 10px;
   color: #1a237e;
